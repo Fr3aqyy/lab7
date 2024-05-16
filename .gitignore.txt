@@ -1,0 +1,8 @@
+# Игнорировать файлы и директории Visual Studio
+*.suo
+*.cache
+*.csproj.user
+
+# Игнорировать системные файлы
+.DS_Store
+Thumbs.db
