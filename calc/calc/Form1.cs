@@ -12,10 +12,7 @@ namespace calc
         {
             InitializeComponent();
 
-            // Приветственное сообщение при запуске программы
-            MessageBox.Show("Добро пожаловать в калькулятор!");
-            // Запрос на завершение работы программы
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -164,6 +161,14 @@ namespace calc
         {
             Button button = (Button)sender;
             textBox1.Text += button.Text;
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Завершить работу программы (Y / N)?", "Выход", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Отмена закрытия формы
+            }
         }
     }
 }
