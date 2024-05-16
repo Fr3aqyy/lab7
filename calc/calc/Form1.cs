@@ -11,6 +11,11 @@ namespace calc
         public Form1()
         {
             InitializeComponent();
+
+            // Приветственное сообщение при запуске программы
+            MessageBox.Show("Добро пожаловать в калькулятор!");
+            // Запрос на завершение работы программы
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
