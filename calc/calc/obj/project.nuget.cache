@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hAIcnzV6u73M4mvUvQFZh63RKBuqeMvbGk+TSqtlJomA5U9JIneyNtS3SukGotPbIw1rNBa4GOz3f4FpKylkkw==",
+  "dgSpecHash": "/eJRk4KFtEd+R93+KjQV4VZSc48LiPkvrfVlBVY98TgI1bZHhp/VMvgVSTousL5aZLKKQAIts8OPjfZbsSrupw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\calc.csproj",
+  "projectFilePath": "C:\\git\\lab7\\calc\\calc\\calc.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

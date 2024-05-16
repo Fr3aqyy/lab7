@@ -108,27 +108,50 @@ namespace calc
 
         private void button5_Click(object sender, EventArgs e)
         {
-            double newValue = double.Parse(textBox1.Text);
-            double result = 0;
-            switch (operation)
+            try
             {
-                case "+":
-                    result = currentValue + newValue;
-                    break;
-                case "-":
-                    result = currentValue - newValue;
-                    break;
-                case "*":
-                    result = currentValue * newValue;
-                    break;
-                case "/":
-                    if (newValue != 0)
-                        result = currentValue / newValue;
-                    else
-                        MessageBox.Show("На ноль делить нельзя!");
-                    break;
+                double newValue = double.Parse(textBox1.Text);
+                double result = 0;
+                switch (operation)
+                {
+                    case "+":
+                        result = currentValue + newValue;
+                        break;
+                    case "-":
+                        result = currentValue - newValue;
+                        break;
+                    case "*":
+                        result = currentValue * newValue;
+                        break;
+                    case "/":
+                        if (newValue != 0)
+                            result = currentValue / newValue;
+                        else
+                            throw new DivideByZeroException("Деление на ноль недопустимо!");
+                        break;
+                }
+                textBox1.Text = result.ToString();
             }
-            textBox1.Text = result.ToString();
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод!");
+            }
+            catch (DivideByZeroException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка: " + ex.Message);
+            }
+        }
+
+       
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            textBox1.Text += button.Text;
         }
     }
 }

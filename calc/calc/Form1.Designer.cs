@@ -44,6 +44,7 @@
             button13 = new Button();
             button14 = new Button();
             button15 = new Button();
+            button16 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -93,7 +94,7 @@
             // button5
             // 
             button5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(12, 320);
+            button5.Location = new Point(12, 380);
             button5.Name = "button5";
             button5.Size = new Size(219, 57);
             button5.TabIndex = 4;
@@ -104,9 +105,9 @@
             // button6
             // 
             button6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.Location = new Point(311, 131);
+            button6.Location = new Point(237, 377);
             button6.Name = "button6";
-            button6.Size = new Size(65, 246);
+            button6.Size = new Size(65, 60);
             button6.TabIndex = 5;
             button6.Text = "С";
             button6.UseVisualStyleBackColor = true;
@@ -117,7 +118,7 @@
             textBox1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(12, 66);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(364, 50);
+            textBox1.Size = new Size(293, 50);
             textBox1.TabIndex = 6;
             // 
             // button7
@@ -219,11 +220,23 @@
             button15.UseVisualStyleBackColor = true;
             button15.Click += button15_Click;
             // 
+            // button16
+            // 
+            button16.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            button16.Location = new Point(12, 317);
+            button16.Name = "button16";
+            button16.Size = new Size(219, 57);
+            button16.TabIndex = 16;
+            button16.Text = "0";
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(387, 389);
+            ClientSize = new Size(304, 439);
+            Controls.Add(button16);
             Controls.Add(button15);
             Controls.Add(button14);
             Controls.Add(button13);
@@ -264,5 +277,6 @@
         private Button button13;
         private Button button14;
         private Button button15;
+        private Button button16;
     }
 }

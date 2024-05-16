@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\calc.csproj": {}
+    "C:\\git\\lab7\\calc\\calc\\calc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\calc.csproj": {
+    "C:\\git\\lab7\\calc\\calc\\calc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\calc.csproj",
+        "projectUniqueName": "C:\\git\\lab7\\calc\\calc\\calc.csproj",
         "projectName": "calc",
-        "projectPath": "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\calc.csproj",
+        "projectPath": "C:\\git\\lab7\\calc\\calc\\calc.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ivan\\source\\repos\\calc\\calc\\obj\\",
+        "outputPath": "C:\\git\\lab7\\calc\\calc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
