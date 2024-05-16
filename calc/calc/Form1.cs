@@ -108,27 +108,57 @@ namespace calc
 
         private void button5_Click(object sender, EventArgs e)
         {
-            double newValue = double.Parse(textBox1.Text);
-            double result = 0;
-            switch (operation)
+            try
             {
-                case "+":
-                    result = currentValue + newValue;
-                    break;
-                case "-":
-                    result = currentValue - newValue;
-                    break;
-                case "*":
-                    result = currentValue * newValue;
-                    break;
-                case "/":
-                    if (newValue != 0)
-                        result = currentValue / newValue;
-                    else
-                        MessageBox.Show("На ноль делить нельзя!");
-                    break;
+                double newValue = double.Parse(textBox1.Text);
+                double result = 0;
+                switch (operation)
+                {
+                    case "+":
+                        result = checked(currentValue + newValue);
+                        break;
+                    case "-":
+                        result = checked(currentValue - newValue);
+                        break;
+                    case "*":
+                        result = checked(currentValue * newValue);
+                        break;
+                    case "/":
+                        if (newValue != 0)
+                            result = currentValue / newValue;
+                        else
+                            throw new DivideByZeroException("Деление на ноль недопустимо!");
+                        break;
+                }
+                textBox1.Text = result.ToString();
             }
-            textBox1.Text = result.ToString();
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод!");
+            }
+            catch (DivideByZeroException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Результат выходит за пределы допустимого диапазона значений.");
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Поле не должно быть пустым.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка: " + ex.Message);
+            }
+        }
+
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            textBox1.Text += button.Text;
         }
     }
 }
